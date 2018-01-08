@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_weight="0.02"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageSwitcher
+            android:id="@+id/planner_image_switcher"
+            android:layout_width="327dp"
+            android:layout_height="290dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:padding="20dp"
+            app:srcCompat="@drawable/bakker" />
+
+        <ImageView
+            android:id="@+id/planner_edit_activity"
+            android:layout_width="40dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.02"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/planer_image_prev_activity"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            app:srcCompat="@drawable/ic_menu_left" />
+
+        <TextView
+            android:id="@+id/planner_activity_current"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="MAANDAG"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionMode.Title"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/planner_image_next_activity"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="0"
+            android:gravity="center_vertical|center_horizontal"
+            app:srcCompat="@drawable/ic_menu_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.02"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/planner_time_set"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="00:00"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionMode.Title"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+</LinearLayout>

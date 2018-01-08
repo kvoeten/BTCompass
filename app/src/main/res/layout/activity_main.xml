@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_weight="0.02"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text_title_date_current"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="1 Jan, 2000"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title" />
+
+        <ImageView
+            android:id="@+id/image_title_calendar"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_title_calendar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_weight="0.02"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/image_prev_day"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            app:srcCompat="@drawable/ic_menu_left" />
+
+        <TextView
+            android:id="@+id/text_title_day_current"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="MAANDAG"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionMode.Title"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/image_next_day"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            app:srcCompat="@drawable/ic_menu_right" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <ViewSwitcher
+        android:id="@+id/view_switch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/list_activities"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+
+        <view
+            class="com.kazvoeten.btcompass2.PlannerView"
+            id="@+id/view3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </ViewSwitcher>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_weight="0.02">
+
+        <FrameLayout
+            android:id="@+id/frame_color_slab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_main_actions"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.02"
+                android:clickable="true"
+                android:paddingTop="20dp"
+                android:visibility="visible"
+                app:backgroundTint="@color/colorAccentDark"
+                app:fabSize="normal"
+                app:layout_anchor="@id/bottom_space"
+                app:layout_anchorGravity="bottom|right|end"
+                app:rippleColor="@android:color/background_light"
+                app:srcCompat="@drawable/ic_add_activity" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:background="@color/colorAccent"
+                android:orientation="horizontal"></LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
